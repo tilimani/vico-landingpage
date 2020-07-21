@@ -10,7 +10,10 @@ import CustomDatePicker from "./CustomDatePicker";
 
 const useStyles = makeStyles(theme => ({
   search_area: {
-    marginTop: "6vh"
+    marginTop: "6vh",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "2vh"
+    }
   },
   grid_item_content: {
     width: "100%",

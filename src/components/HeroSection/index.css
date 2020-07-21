@@ -73,10 +73,14 @@
 @media screen and (max-width: 745px) {
   .hero-content .title {
     font-size: 46px;
+    line-height: 1.2;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .hero-section-wrapper {
+    height: 110vh;
+  }
   .hero-content {
     height: 74vh;
     padding: 0 8vw;
@@ -85,7 +89,6 @@
     display: none;
   }
   .hero-content .title {
-    line-height: 1.2;
     font-size: 48px;
   }
   .hero-content .description {
@@ -95,5 +98,14 @@
   }
   .left-gray-rectangle {
     left: -90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-content .title {
+    font-size: 39px;
+  }
+  .hero-content .description {
+    font-size: 20px;
   }
 }

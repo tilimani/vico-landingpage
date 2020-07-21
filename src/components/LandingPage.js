@@ -1,11 +1,12 @@
 import React from "react";
 import HeroSection from "./HeroSection";
+import PlacesSection from "./PlacesSection";
 
 const LandingPage = () => {
   return (
     <>
       <HeroSection />
-      <div style={{ height: "100vh" }} />
+      <PlacesSection />
     </>
   );
 };
