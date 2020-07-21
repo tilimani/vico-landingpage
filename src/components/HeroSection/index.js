@@ -2,19 +2,31 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 import "./index.css";
 import CustomSelect from "./CustomSelect";
+import CustomDatePicker from "./CustomDatePicker";
 
 const useStyles = makeStyles(theme => ({
   search_area: {
     marginTop: "6vh"
+  },
+  grid_item_content: {
+    width: "100%",
+    height: 58,
+    fontWeight: "bold",
+    fontSize: 16,
+    borderRadius: 12
   }
 }));
 
 const HeroSection = () => {
   const classes = useStyles();
 
+  const handleSearch = () => {
+    //Search
+  };
   return (
     <div className="hero-section-wrapper">
       {/** LEFT RECTANGLES DESIGN */}
@@ -63,17 +75,51 @@ const HeroSection = () => {
           stays in Medellin and Bogota.
         </span>
         <Grid container spacing={3} className={classes.search_area}>
-          <Grid item xs={12} sm={3}>
-            <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
+          <Grid item xs={12} sm={6} md={3}>
+            <div
+              style={{
+                backgroundColor: "white",
+                color: "white",
+                height: 58,
+                borderRadius: 12
+              }}
+            >
+              1
+            </div>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
+          <Grid item xs={12} sm={6} md={3}>
+            <div
+              style={{
+                backgroundColor: "white",
+                color: "white",
+                height: 58,
+                borderRadius: 12
+              }}
+            >
+              <CustomDatePicker />
+            </div>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
+          <Grid item xs={12} sm={6} md={3}>
+            <div
+              style={{
+                backgroundColor: "white",
+                color: "white",
+                height: 58,
+                borderRadius: 12
+              }}
+            >
+              1
+            </div>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <div style={{ backgroundColor: "white", color: "gray" }}>4</div>
+          <Grid item xs={12} sm={6} md={3}>
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.grid_item_content}
+              onClick={() => handleSearch()}
+            >
+              Search
+            </Button>
           </Grid>
         </Grid>
       </div>
