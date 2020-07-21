@@ -3,13 +3,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
-import smallRec from "../../assets/small-rectangle.png";
-import mediumRec from "../../assets/medium-rectangle.png";
-import bigRec from "../../assets/big-rectangle.png";
-
-import bgHeroSection from "../../assets/hero_background.png";
-
-import logo from "../../assets/logo.png";
 import "./index.css";
 import CustomSelect from "./CustomSelect";
 
@@ -26,28 +19,32 @@ const HeroSection = () => {
     <div className="hero-section-wrapper">
       {/** LEFT RECTANGLES DESIGN */}
       {/** Dark gray background */}
-      <img src={bgHeroSection} className="hero-section-bg" alt="" />
+      <img
+        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/PSeo-hero_background.png"
+        className="hero-section-bg"
+        alt=""
+      />
       {/** Three divs that represents left gray rectangles design */}
       <img
-        src={smallRec}
+        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/cc_I-small-rectangle.png"
         className="left-gray-rectangle"
         style={{ top: "30vh" }}
         alt=""
       />
       <img
-        src={smallRec}
+        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/cc_I-small-rectangle.png"
         className="left-gray-rectangle"
         style={{ top: "43vh" }}
         alt=""
       />
       <img
-        src={mediumRec}
+        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/ln_O-medium-rectangle.png"
         className="left-gray-rectangle"
         style={{ top: "58vh" }}
         alt=""
       />
       <img
-        src={bigRec}
+        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/kH2d-big-rectangle.png"
         className="left-gray-rectangle"
         style={{ top: "86.5vh" }}
         alt=""
@@ -55,7 +52,11 @@ const HeroSection = () => {
 
       {/** MAIN CONTENT (TEXT/PICKERS ...) */}
       <div className="hero-content">
-        <img src={logo} alt="logo" id="vico-logo" />
+        <img
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/X7w8-logo.png"
+          alt="logo"
+          id="vico-logo"
+        />
         <span className="title">Love where you live</span>
         <span className="description">
           Find and book furnished rooms and apartments for mid-and long-term
@@ -63,13 +64,13 @@ const HeroSection = () => {
         </span>
         <Grid container spacing={3} className={classes.search_area}>
           <Grid item xs={12} sm={3}>
-            <CustomSelect />
+            <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
           </Grid>
           <Grid item xs={12} sm={3}>
             <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
           </Grid>
           <Grid item xs={12} sm={3}>
-            <CustomSelect />
+            <div style={{ backgroundColor: "white", color: "gray" }}>2</div>
           </Grid>
           <Grid item xs={12} sm={3}>
             <div style={{ backgroundColor: "white", color: "gray" }}>4</div>
