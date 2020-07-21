@@ -1,11 +1,14 @@
 import React from "react";
-import "./styles.css";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./common/theme";
+import LandingPage from "./components/LandingPage";
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <ThemeProvider theme={theme}>
+      <LandingPage />
+    </ThemeProvider>
   );
 }
+
+export default App;
