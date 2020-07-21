@@ -39,31 +39,6 @@ const HeroSection = () => {
         className="hero-section-bg"
         alt=""
       />
-      {/** Three divs that represents left gray rectangles design */}
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/cc_I-small-rectangle.png"
-        className="left-gray-rectangle"
-        style={{ top: "30vh" }}
-        alt=""
-      />
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/cc_I-small-rectangle.png"
-        className="left-gray-rectangle"
-        style={{ top: "43vh" }}
-        alt=""
-      />
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/ln_O-medium-rectangle.png"
-        className="left-gray-rectangle"
-        style={{ top: "58vh" }}
-        alt=""
-      />
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/kH2d-big-rectangle.png"
-        className="left-gray-rectangle"
-        style={{ top: "86.5vh" }}
-        alt=""
-      />
 
       {/** MAIN CONTENT (TEXT/PICKERS ...) */}
       <div className="hero-content">
