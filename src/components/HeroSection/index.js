@@ -8,7 +8,7 @@ import "./index.css";
 import CustomSelect from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 
-import hero_background from "../../assets/hero_background.png";
+import heroBackground from "../../assets/heroBackground.png";
 
 const useStyles = makeStyles(theme => ({
   search_area: {
@@ -36,7 +36,7 @@ const HeroSection = () => {
     <div className="hero-section-wrapper">
       {/** LEFT RECTANGLES DESIGN */}
       {/** Dark gray background */}
-      <img src={hero_background} className="hero-section-bg" alt="" />
+      <img src={heroBackground} className="hero-section-bg" alt="" />
 
       {/** MAIN CONTENT (TEXT/PICKERS ...) */}
       <div className="hero-content">
