@@ -16,39 +16,48 @@ import Studio from "../../assets/Studio.jpg";
 const mockData = [
   {
     title: "Laureles",
-    image: Laureles
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/tEP_-Laureles.jpg"
   },
   {
     title: "Apartment",
-    image: Apartment
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/_rJV-Aparment.jpg"
   },
   {
     title: "Private bathroom",
-    image: Bathroom
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/_GQT-Bathroom.jpg"
   },
   {
     title: "Chapinero",
-    image: Chapinero
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/CnQa-Chapinero.jpg"
   },
   {
     title: "Economic",
-    image: Economic
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/IQEO-Economic.jpg"
   },
   {
     title: "Studio",
-    image: Studio
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/3y31-Studio.jpg"
   },
   {
     title: "Laureles",
-    image: Laureles
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/tEP_-Laureles.jpg"
   },
   {
     title: "Apartment",
-    image: Apartment
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/_rJV-Aparment.jpg"
   },
   {
     title: "Private bathroom",
-    image: Bathroom
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/_GQT-Bathroom.jpg"
   }
 ];
 const useStyles = makeStyles(theme => ({
