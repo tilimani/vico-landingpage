@@ -8,6 +8,8 @@ import "./index.css";
 import CustomSelect from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 
+import hero_background from "../../assets/hero_background.png";
+
 const useStyles = makeStyles(theme => ({
   search_area: {
     marginTop: "6vh",
@@ -34,11 +36,7 @@ const HeroSection = () => {
     <div className="hero-section-wrapper">
       {/** LEFT RECTANGLES DESIGN */}
       {/** Dark gray background */}
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/PSeo-hero_background.png"
-        className="hero-section-bg"
-        alt=""
-      />
+      <img src={hero_background} className="hero-section-bg" alt="" />
 
       {/** MAIN CONTENT (TEXT/PICKERS ...) */}
       <div className="hero-content">
