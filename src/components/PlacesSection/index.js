@@ -8,13 +8,17 @@ import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 import orangeHightLighter from "../../assets/orangeHightLighter.png";
 
 const useStyles = makeStyles(theme => ({
-  places_section: { height: "20vh", padding: "0 8vw", marginTop: "4vh" },
+  places_section: { marginTop: "4vh" },
   section_title: {
     fontFamily: "Nunito",
     fontWeight: "bold",
     fontSize: 36,
     lineHeight: "115.6%",
-    color: "#212529"
+    color: theme.palette.secondary.dark,
+    padding: "0 8vw",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30
+    }
   },
   highlighter: {
     position: "relative"
@@ -26,7 +30,8 @@ const useStyles = makeStyles(theme => ({
   },
   links_wrapper: {
     display: "flex",
-    marginTop: "3vh"
+    marginTop: "3vh",
+    padding: "0 8vw"
   },
   link_wrapper: {
     display: "flex",
@@ -41,6 +46,11 @@ const useStyles = makeStyles(theme => ({
   link_wrapper_text: {
     fontSize: 14,
     color: theme.palette.primary.main
+  },
+  not_needed_section: {
+    height: 262,
+    marginTop: "2vh",
+    backgroundColor: theme.palette.secondary.main
   }
 }));
 
@@ -77,6 +87,7 @@ const PlacesSection = () => {
           <span className={classes.link_wrapper_text}>Show me the map</span>
         </div>
       </div>
+      <div className={classes.not_needed_section} />
     </div>
   );
 };

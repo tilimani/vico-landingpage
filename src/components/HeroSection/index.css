@@ -1,5 +1,5 @@
 .hero-section-wrapper {
-  height: 80vh;
+  height: 90vh;
 }
 
 .hero-section-bg {
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 960px) {
   .hero-section-wrapper {
-    height: 94vh;
+    height: 110vh;
   }
 }
 
@@ -78,9 +78,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .hero-section-wrapper {
-    height: 110vh;
-  }
   .hero-content {
     height: 74vh;
     padding: 0 8vw;
