@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 import GridList from "./GridList";
 
 const useStyles = makeStyles(theme => ({
@@ -21,11 +22,26 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     top: 36,
     left: 0
+  },
+  search_button: {
+    height: 58,
+    width: 309,
+    borderRadius: 12,
+    fontWeight: "bold",
+    fontSize: 16,
+    marginTop: "2vh",
+    float: "right",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%"
+    }
   }
 }));
 
 const FieldsSection = () => {
   const classes = useStyles();
+  const handleSearch = () => {
+    //sreach
+  };
   return (
     <div className={classes.fields_section}>
       <span className={classes.section_title}>
@@ -41,6 +57,14 @@ const FieldsSection = () => {
         for?
       </span>
       <GridList />
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.search_button}
+        onClick={() => handleSearch()}
+      >
+        Search my new home
+      </Button>
     </div>
   );
 };

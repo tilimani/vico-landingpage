@@ -44,11 +44,8 @@ const GridItem = props => {
           <Avatar alt={title} src={image} className={classes.avatar} />
         </ListItemAvatar>
         <ListItemText
-          primary={
-            <Typography component="span" className={classes.title}>
-              {title}
-            </Typography>
-          }
+          className={classes.title}
+          primary={<Typography component="span">{title}</Typography>}
         />
       </ListItem>
     </Grid>

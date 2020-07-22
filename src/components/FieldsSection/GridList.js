@@ -6,13 +6,6 @@ import Grid from "@material-ui/core/Grid";
 
 import GridItem from "./GridItem";
 
-import Laureles from "../../assets/Laureles.jpg";
-import Apartment from "../../assets/Aparment.jpg";
-import Bathroom from "../../assets/Bathroom.jpg";
-import Chapinero from "../../assets/Chapinero.jpg";
-import Economic from "../../assets/Economic.jpg";
-import Studio from "../../assets/Studio.jpg";
-
 const mockData = [
   {
     title: "Laureles",
