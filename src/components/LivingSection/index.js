@@ -2,28 +2,26 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
-import screwedHighlighter from "../../assets/screwedHighlighter.png";
 import CardItem from "./CardItem";
-
-import imgCard1 from "../../assets/imgCard1.png";
-import imgCard2 from "../../assets/imgCard2.png";
-import imgCard3 from "../../assets/imgCard3.png";
 
 const mockData = [
   {
-    image: imgCard1,
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/bzGY-imgCard1.png",
     title: "Talk directly to verified hosts",
     description:
       "All owners and houses are verified by our teams. Browse our huge variety of homes and speak with hosts before choosing your new place to live."
   },
   {
-    image: imgCard2,
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/1FIZ-imgCard2.png",
     title: "You are covered during the entire stay.",
     description:
       "We take care of the boring stuff. Your stay is covered through a safety deposit, a rental contract and a flexible cancellation policy. We are here for you 7 days of the week."
   },
   {
-    image: imgCard3,
+    image:
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/m1GU-imgCard3.png",
     title: "Fall in love with where you live.",
     description:
       "We take care of the boring stuff. Your stay is covered through a the safety deposit, a rental contract and a flexible cancellation policy. We are here for you 7 days of the week."
@@ -73,7 +71,7 @@ const FieldsSection = () => {
         <span className={classes.highlighter}>
           {`loving `}
           <img
-            src={screwedHighlighter}
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/YXQb-screwedHighlighter.png"
             alt=""
             className={classes.orange_hightLighter}
           />
