@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import orangeHightLightLines from "../../assets/orangeHightLightLines.png";
 import GridList from "./GridList";
 
 const useStyles = makeStyles(theme => ({
@@ -34,7 +33,7 @@ const FieldsSection = () => {
         <span className={classes.highlighter}>
           {`looking `}
           <img
-            src={orangeHightLightLines}
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/K_-i-Ilustraci%C3%B3n+1.png"
             alt=""
             className={classes.orange_hightLighter}
           />

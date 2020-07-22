@@ -5,8 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppsOutlinedIcon from "@material-ui/icons/AppsOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 
-import orangeHightLighter from "../../assets/orangeHightLighter.png";
-
 const useStyles = makeStyles(theme => ({
   places_section: { marginTop: "4vh" },
   section_title: {
@@ -63,7 +61,7 @@ const PlacesSection = () => {
         <span className={classes.highlighter}>
           your needs
           <img
-            src={orangeHightLighter}
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/OwSG-orangeHightLighter.png"
             alt=""
             className={classes.orange_hightLighter}
           />
