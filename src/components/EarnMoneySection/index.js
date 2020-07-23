@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import manager from "../../assets/manager.png";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -120,7 +119,11 @@ const EarnMoneySection = () => {
           </Typography>
           {isMobileScreen && (
             <div style={{ marginTop: "2vh", textAlign: "center" }}>
-              <img src={manager} alt="manager" className={classes.image} />
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/RjnS-manager.png"
+                alt="manager"
+                className={classes.image}
+              />
             </div>
           )}
           <Typography
@@ -141,7 +144,11 @@ const EarnMoneySection = () => {
           </Button>
         </div>
         <div className={classes.image_wrapper}>
-          <img src={manager} alt="manager" className={classes.image} />
+          <img
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/RjnS-manager.png"
+            alt="manager"
+            className={classes.image}
+          />
         </div>
       </Card>
     </div>

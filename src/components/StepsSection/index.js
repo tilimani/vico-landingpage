@@ -6,13 +6,7 @@ import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import home from "../../assets/home.png";
-import arrow from "../../assets/arrow.png";
 import orangeHighlighter from "../../assets/orangeHighlighter2.png";
-
-import icon_home from "../../assets/icon_home.png";
-import icon_chat from "../../assets/icon_chat.png";
-import icon_sheet from "../../assets/icon_sheet.png";
-import icon_smile from "../../assets/icon_smile.png";
 
 const useStyles = makeStyles(theme => ({
   steps_section: {
@@ -110,7 +104,10 @@ const StepsSection = () => {
             </Grid>
             <Grid item sm={2} md={6} className={classes.section_title_grid}>
               <div className={classes.arrow_wrapper}>
-                <img src={arrow} alt="arrow" />
+                <img
+                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/z5Sg-arrow.png"
+                  alt="arrow"
+                />
               </div>
             </Grid>
             <Grid item sm={8} md={6} className={classes.section_title_grid}>
@@ -129,13 +126,16 @@ const StepsSection = () => {
           <div className={classes.section_title}>
             <span>{`Move in `}</span>
             <div className={classes.arrow_wrapper}>
-              <img src={arrow} alt="arrow" />
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/z5Sg-arrow.png"
+                alt="arrow"
+              />
             </div>
             <span>{` Start `}</span>
             <span className={classes.highlighter}>
               {` living`}
               <img
-                src={orangeHighlighter}
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/Nc2A-orangeHighlighter2.png"
                 alt=""
                 className={classes.orange_hightLighter}
               />
@@ -162,7 +162,10 @@ const StepsSection = () => {
           <Grid container spacing={3} className={classes.steps_grid}>
             <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
               <div className={classes.step_item_image}>
-                <img src={icon_home} alt="Request a stay." />
+                <img
+                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/vZ3W-icon_home.png"
+                  alt="Request a stay."
+                />
               </div>
 
               <div className={classes.step_item_title}>
@@ -173,7 +176,10 @@ const StepsSection = () => {
             </Grid>
             <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
               <div className={classes.step_item_image}>
-                <img src={icon_chat} alt="Chat with the host." />
+                <img
+                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/6pmP-icon_chat.png"
+                  alt="Chat with the host."
+                />
               </div>
 
               <div className={classes.step_item_title}>
@@ -184,7 +190,10 @@ const StepsSection = () => {
             </Grid>
             <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
               <div className={classes.step_item_image}>
-                <img src={icon_sheet} alt="Book your room." />
+                <img
+                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/X471-icon_sheet.png"
+                  alt="Book your room."
+                />
               </div>
 
               <div className={classes.step_item_title}>
@@ -195,7 +204,10 @@ const StepsSection = () => {
             </Grid>
             <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
               <div className={classes.step_item_image}>
-                <img src={icon_smile} alt="Move in and join our community" />
+                <img
+                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/AEVR-icon_smile.png"
+                  alt="Move in and join our community"
+                />
               </div>
 
               <div className={classes.step_item_title}>
