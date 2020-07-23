@@ -11,6 +11,8 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 6,
     height: 320,
     cursor: "pointer",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
     [theme.breakpoints.down("xs")]: {
       height: "auto",
       padding: "30px 30px"
@@ -47,6 +49,12 @@ const useStyles = makeStyles(theme => ({
   card_header_image: {
     float: "right",
     width: 200,
+    [theme.breakpoints.down("md")]: {
+      width: 160
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: 200
+    },
     [theme.breakpoints.down("xs")]: {
       width: 160
     }
@@ -72,9 +80,7 @@ const CardItem = props => {
       <Card
         className={classes.card}
         style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "contain"
+          backgroundImage: `url(${background})`
         }}
       >
         <div className={classes.card_header}>

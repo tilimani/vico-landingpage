@@ -5,7 +5,6 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import home from "../../assets/home.png";
 import orangeHighlighter from "../../assets/orangeHighlighter2.png";
 
 const useStyles = makeStyles(theme => ({
@@ -82,8 +81,10 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 12,
     fontWeight: "bold",
     fontSize: 16,
-    marginTop: "6vh",
     float: "right",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "6vh"
+    },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       fontSize: 20
@@ -152,7 +153,11 @@ const StepsSection = () => {
     <div className={classes.steps_section}>
       <Grid container spacing={3}>
         <Grid item sm={12} md={6} className={classes.home_image_wrapper}>
-          <img src={home} alt="home" className={classes.home_image} />
+          <img
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/n3b_-home.png"
+            alt="home"
+            className={classes.home_image}
+          />
         </Grid>
         <Grid item sm={12} md={6}>
           {getTitleComponent()}
