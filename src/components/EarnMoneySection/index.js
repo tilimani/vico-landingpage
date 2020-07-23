@@ -1,0 +1,151 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
+import manager from "../../assets/manager.png";
+import Card from "@material-ui/core/Card";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
+const useStyles = makeStyles(theme => ({
+  earn_money_section: {
+    padding: "0 18vw",
+
+    [theme.breakpoints.down("sm")]: {
+      padding: "0 8vw"
+    }
+  },
+  card: {
+    padding: "50px 0px",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    borderRadius: 10,
+    height: 390,
+    display: "flex",
+    border: "1px solid rgba(196, 196, 196, 0.35)",
+    margin: "auto",
+    marginTop: "20vh",
+    marginBottom: "10vh",
+    [theme.breakpoints.down("sm")]: {
+      padding: "50px 0px",
+      width: "100%",
+      height: "auto"
+    }
+  },
+  description_wrapper: {
+    position: "relative",
+    width: "50%",
+    padding: "50px 0px 0px 70px",
+    [theme.breakpoints.down("md")]: {
+      padding: "25px 0px 0px 25px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: "0px 40px",
+      width: "100%"
+    },
+    [theme.breakpoints.down("xs")]: {
+      padding: 0,
+      paddingLeft: 12,
+      paddingRight: 12
+    }
+  },
+  title: {
+    fontFamily: "Nunito",
+    fontWeight: "bold",
+    fontSize: 36,
+    lineHeight: 1.2,
+    color: theme.palette.secondary.main,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 42
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30
+    }
+  },
+  description: {
+    fontSize: 20,
+    marginTop: "4vh",
+    color: theme.palette.secondary.main,
+    [theme.breakpoints.down("md")]: {
+      marginTop: "2vh"
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16
+    }
+  },
+  image_wrapper: {
+    position: "relative",
+    width: "50%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    padding: "0px 70px",
+    [theme.breakpoints.down("md")]: {
+      padding: "0px 25px 0px 0px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  image: {
+    [theme.breakpoints.down("md")]: {
+      width: 300
+    }
+  },
+  upload_button: {
+    height: 58,
+    width: "80%",
+    borderRadius: 12,
+    fontWeight: "bold",
+    fontSize: 16,
+    marginTop: 40,
+    float: "left",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%"
+    }
+  }
+}));
+const EarnMoneySection = () => {
+  const classes = useStyles();
+  const isMobileScreen = useMediaQuery("(max-width:960px)");
+  const upload = () => {
+    //upload
+  };
+  return (
+    <div className={classes.earn_money_section}>
+      <Card className={classes.card}>
+        <div className={classes.description_wrapper}>
+          <Typography component="span" className={classes.title}>
+            Earn money by sharing your home
+          </Typography>
+          {isMobileScreen && (
+            <div style={{ marginTop: "2vh", textAlign: "center" }}>
+              <img src={manager} alt="manager" className={classes.image} />
+            </div>
+          )}
+          <Typography
+            variant="body2"
+            component="p"
+            className={classes.description}
+          >
+            Manage your properties efficiently and turn them into a profit by
+            becoming a host, you became part of our family.
+          </Typography>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.upload_button}
+            onClick={() => upload()}
+          >
+            Upload my rooms
+          </Button>
+        </div>
+        <div className={classes.image_wrapper}>
+          <img src={manager} alt="manager" className={classes.image} />
+        </div>
+      </Card>
+    </div>
+  );
+};
+
+export default EarnMoneySection;

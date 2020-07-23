@@ -4,24 +4,32 @@ import Grid from "@material-ui/core/Grid";
 
 import CardItem from "./CardItem";
 
+import bg1 from "../../assets/Background_card1.png";
+import bg2 from "../../assets/Background_card2.png";
+import bg3 from "../../assets/Background_card3.png";
+
+import image1 from "../../assets/Illustration_Card1.png";
+import image2 from "../../assets/Illustration_Card2.png";
+import image3 from "../../assets/Illustration_Card3.png";
+
 const mockData = [
   {
-    image:
-      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/bzGY-imgCard1.png",
+    image: image1,
+    background: bg1,
     title: "Talk directly to verified hosts",
     description:
       "All owners and houses are verified by our teams. Browse our huge variety of homes and speak with hosts before choosing your new place to live."
   },
   {
-    image:
-      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/1FIZ-imgCard2.png",
+    image: image2,
+    background: bg2,
     title: "You are covered during the entire stay.",
     description:
       "We take care of the boring stuff. Your stay is covered through a safety deposit, a rental contract and a flexible cancellation policy. We are here for you 7 days of the week."
   },
   {
-    image:
-      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/m1GU-imgCard3.png",
+    image: image3,
+    background: bg3,
     title: "Fall in love with where you live.",
     description:
       "We take care of the boring stuff. Your stay is covered through a the safety deposit, a rental contract and a flexible cancellation policy. We are here for you 7 days of the week."

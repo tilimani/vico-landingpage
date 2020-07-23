@@ -10,18 +10,28 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "0px 8px 27px rgba(0, 0, 0, 0.1)",
     borderRadius: 6,
     height: 320,
-    cursor: "pointer"
+    cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      height: "auto",
+      padding: "30px 30px"
+    }
   },
   description: {
     fontSize: 20,
     color: theme.palette.secondary.main,
-    marginTop: 40
+    marginTop: 40,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16
+    }
   },
   title: {
     fontSize: 26,
     fontWeight: "bold",
     color: theme.palette.secondary.main,
-    lineHeight: 1.2
+    lineHeight: 1.2,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20
+    }
   },
   card_header: {
     display: "flex",
@@ -34,7 +44,13 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     width: "50%"
   },
-  card_header_image: { float: "right", width: 200 },
+  card_header_image: {
+    float: "right",
+    width: 200,
+    [theme.breakpoints.down("xs")]: {
+      width: 160
+    }
+  },
   card_header_typo_wrapper: {
     position: "relative",
     width: "50%",
@@ -49,10 +65,18 @@ const useStyles = makeStyles(theme => ({
 const CardItem = props => {
   const classes = useStyles();
   const { item } = props;
-  const { image, title, description } = item;
+  const { image, title, description, background } = item;
+
   return (
     <Grid item xs={12} md={4}>
-      <Card className={classes.card}>
+      <Card
+        className={classes.card}
+        style={{
+          backgroundImage: `url(${background})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain"
+        }}
+      >
         <div className={classes.card_header}>
           <div className={classes.card_header_image_wrapper}>
             <img

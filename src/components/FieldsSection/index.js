@@ -32,7 +32,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: "2vh",
     float: "right",
     [theme.breakpoints.down("xs")]: {
-      width: "100%"
+      width: "100%",
+      fontSize: 20
     }
   }
 }));
