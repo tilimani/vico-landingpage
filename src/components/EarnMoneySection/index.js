@@ -6,8 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import orangeHighlighter3 from "../../assets/orangeHighlighter3.png";
-
 const useStyles = makeStyles(theme => ({
   earn_money_section: {
     padding: "0 18vw",
@@ -131,7 +129,7 @@ const EarnMoneySection = () => {
             <span className={classes.highlighter}>
               {`money `}
               <img
-                src={orangeHighlighter3}
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/f0YW-orangeHighlighter3.png"
                 alt=""
                 className={classes.orange_hightLighter}
               />
