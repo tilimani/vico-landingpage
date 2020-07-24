@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   orange_hightLighter: {
     position: "absolute",
-    top: -20,
+    top: -24,
     left: -38
   }
 }));
@@ -38,6 +38,7 @@ const Community = () => {
     dots: true,
     infinite: true,
     speed: 500,
+    centerMode: true,
     slidesToShow: isMobileScreen ? 1 : 3,
     slidesToScroll: 1
   };

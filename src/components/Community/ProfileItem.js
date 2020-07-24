@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -9,16 +8,17 @@ const useStyles = makeStyles(theme => ({
     display: "flex !important",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: "6vh"
   },
   description: {
     fontSize: 16,
     color: theme.palette.secondary.light,
     marginTop: 20,
-    width: 400,
+    width: 350,
     textAlign: "center",
     [theme.breakpoints.down("md")]: {
-      width: "auto"
+      width: 300
     }
   },
   name: {
@@ -30,13 +30,6 @@ const useStyles = makeStyles(theme => ({
 
 const ProfileItem = () => {
   const classes = useStyles();
-  const isMobileScreen = useMediaQuery("(max-width:960px)");
-  // useEffect(() => {
-  //   !isMobileScreen &&
-  //     document
-  //       .getElementsByClassName("slick-slide slick-active")[1]
-  //       .classList.add("active-profile");
-  // });
   return (
     <div className={classes.profile_wrapper}>
       <img

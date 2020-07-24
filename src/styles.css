@@ -23,23 +23,30 @@ body {
   margin-top: 67px;
 }
 
-/* .active-profile {
+.slick-center {
   transform: translateY(-67px);
-} */
+  transition: 0.5s ease;
+}
 
-/* .active-profile img {
+.slick-center img {
   width: 200px;
-} */
+}
 
-.slick-slide p {
+.slick-center p {
   color: #2a3c44;
   font-weight: bold;
   font-size: 18px;
 }
 
-.slick-slide span {
+.slick-center span {
   font-size: 18px;
   color: #ef8e01;
+}
+
+@media screen and (max-width: 1342px) {
+  .slick-slide p {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 960px) {
