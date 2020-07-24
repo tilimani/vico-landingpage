@@ -18,3 +18,32 @@ body {
 .slick-slide img {
   width: 140px;
 }
+
+.slick-initialized .slick-slide {
+  margin-top: 67px;
+}
+
+/* .active-profile {
+  transform: translateY(-67px);
+} */
+
+/* .active-profile img {
+  width: 200px;
+} */
+
+.slick-slide p {
+  color: #2a3c44;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.slick-slide span {
+  font-size: 18px;
+  color: #ef8e01;
+}
+
+@media screen and (max-width: 960px) {
+  .slick-slide p {
+    width: 350px;
+  }
+}

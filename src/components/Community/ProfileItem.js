@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ellipse from "../../assets/Ellipse.png";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +30,13 @@ const useStyles = makeStyles(theme => ({
 
 const ProfileItem = () => {
   const classes = useStyles();
-
+  const isMobileScreen = useMediaQuery("(max-width:960px)");
+  // useEffect(() => {
+  //   !isMobileScreen &&
+  //     document
+  //       .getElementsByClassName("slick-slide slick-active")[1]
+  //       .classList.add("active-profile");
+  // });
   return (
     <div className={classes.profile_wrapper}>
       <img
