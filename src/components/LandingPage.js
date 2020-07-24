@@ -5,6 +5,7 @@ import FieldsSection from "./FieldsSection";
 import LivingSection from "./LivingSection";
 import StepsSection from "./StepsSection";
 import EarnMoneySection from "./EarnMoneySection";
+import NeedsSection from "./NeedsSection";
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <LivingSection />
       <StepsSection />
       <EarnMoneySection />
+      <NeedsSection />
     </>
   );
 };

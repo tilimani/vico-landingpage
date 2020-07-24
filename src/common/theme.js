@@ -1,6 +1,9 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
+  status: {
+    danger: "#e53e3e"
+  },
   palette: {
     primary: {
       main: "#EF8E01",
@@ -11,6 +14,9 @@ const theme = createMuiTheme({
     secondary: {
       main: "#2A3C44",
       dark: "#212529"
+    },
+    success: {
+      main: "#43977F"
     }
   },
   typography: {
