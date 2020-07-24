@@ -4,6 +4,8 @@ import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
+import "./style.css";
+
 const useStyles = makeStyles(theme => ({
   card: {
     padding: "50px 40px",
@@ -100,7 +102,7 @@ const CardItem = props => {
   return (
     <Grid item xs={12} md={4}>
       <Card
-        className={classes.card}
+        className={[classes.card, "card-item"]}
         style={{
           backgroundImage: `url(${background})`
         }}
