@@ -6,6 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
+import orangeHighlighter3 from "../../assets/orangeHighlighter3.png";
+
 const useStyles = makeStyles(theme => ({
   earn_money_section: {
     padding: "0 18vw",
@@ -57,6 +59,17 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 30
+    }
+  },
+  highlighter: {
+    position: "relative"
+  },
+  orange_hightLighter: {
+    position: "absolute",
+    top: -10,
+    left: 0,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%"
     }
   },
   description: {
@@ -114,7 +127,16 @@ const EarnMoneySection = () => {
       <Card className={classes.card}>
         <div className={classes.description_wrapper}>
           <Typography component="span" className={classes.title}>
-            Earn money by sharing your home
+            {`Earn `}
+            <span className={classes.highlighter}>
+              {`money `}
+              <img
+                src={orangeHighlighter3}
+                alt=""
+                className={classes.orange_hightLighter}
+              />
+            </span>
+            by sharing your home
           </Typography>
           {isMobileScreen && (
             <div style={{ marginTop: "2vh", textAlign: "center" }}>
