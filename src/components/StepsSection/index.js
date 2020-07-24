@@ -10,10 +10,18 @@ import orangeHighlighter from "../../assets/orangeHighlighter2.png";
 const useStyles = makeStyles(theme => ({
   steps_section: {
     marginTop: "8vh",
-    padding: "0 8vw"
+    padding: "0 8vw",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column"
+    }
+  },
+  description_wrapper: {
+    marginLeft: 20
   },
   section_title: {
-    fontFamily: "Nunito",
     fontWeight: "bold",
     fontSize: 36,
     display: "flex",
@@ -37,10 +45,10 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     color: theme.palette.secondary.dark,
     fontSize: 16,
-    marginTop: 20
+    marginTop: 10
   },
   steps_grid: {
-    marginTop: 20
+    marginTop: 10
   },
   step_item: {
     display: "flex",
@@ -58,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     height: "50%",
     fontSize: 16,
     fontWeight: "bold",
-    marginTop: "2vh"
+    marginTop: 10
   },
   home_image_wrapper: {
     display: "flex",
@@ -82,9 +90,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     fontSize: 16,
     float: "right",
-    [theme.breakpoints.down("md")]: {
-      marginTop: "6vh"
-    },
+    marginTop: 40,
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       fontSize: 20
@@ -151,87 +157,85 @@ const StepsSection = () => {
   };
   return (
     <div className={classes.steps_section}>
-      <Grid container spacing={3}>
-        <Grid item sm={12} md={6} className={classes.home_image_wrapper}>
-          <img
-            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/n3b_-home.png"
-            alt="home"
-            className={classes.home_image}
-          />
-        </Grid>
-        <Grid item sm={12} md={6}>
-          {getTitleComponent()}
-          <div className={classes.subtitle}>
-            <span>Find a new home in just a few steps</span>
-          </div>
-          <Grid container spacing={3} className={classes.steps_grid}>
-            <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
-              <div className={classes.step_item_image}>
-                <img
-                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/vZ3W-icon_home.png"
-                  alt="Request a stay."
-                />
-              </div>
+      <div className={classes.home_image_wrapper}>
+        <img
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/n3b_-home.png"
+          alt="home"
+          className={classes.home_image}
+        />
+      </div>
+      <div className={classes.description_wrapper}>
+        {getTitleComponent()}
+        <div className={classes.subtitle}>
+          <span>Find a new home in just a few steps</span>
+        </div>
+        <Grid container spacing={3} className={classes.steps_grid}>
+          <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
+            <div className={classes.step_item_image}>
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/vZ3W-icon_home.png"
+                alt="Request a stay."
+              />
+            </div>
 
-              <div className={classes.step_item_title}>
-                <span>
-                  Request a <br /> stay.
-                </span>
-              </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
-              <div className={classes.step_item_image}>
-                <img
-                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/6pmP-icon_chat.png"
-                  alt="Chat with the host."
-                />
-              </div>
+            <div className={classes.step_item_title}>
+              <span>
+                Request a <br /> stay.
+              </span>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
+            <div className={classes.step_item_image}>
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/6pmP-icon_chat.png"
+                alt="Chat with the host."
+              />
+            </div>
 
-              <div className={classes.step_item_title}>
-                <span>
-                  Chat with the <br /> host.
-                </span>
-              </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
-              <div className={classes.step_item_image}>
-                <img
-                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/X471-icon_sheet.png"
-                  alt="Book your room."
-                />
-              </div>
+            <div className={classes.step_item_title}>
+              <span>
+                Chat with the <br /> host.
+              </span>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
+            <div className={classes.step_item_image}>
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/X471-icon_sheet.png"
+                alt="Book your room."
+              />
+            </div>
 
-              <div className={classes.step_item_title}>
-                <span>
-                  Book your <br /> room.
-                </span>
-              </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
-              <div className={classes.step_item_image}>
-                <img
-                  src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/AEVR-icon_smile.png"
-                  alt="Move in and join our community"
-                />
-              </div>
+            <div className={classes.step_item_title}>
+              <span>
+                Book your <br /> room.
+              </span>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={6} md={3} className={classes.step_item}>
+            <div className={classes.step_item_image}>
+              <img
+                src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/AEVR-icon_smile.png"
+                alt="Move in and join our community"
+              />
+            </div>
 
-              <div className={classes.step_item_title}>
-                <span>
-                  Move in and join <br /> our community
-                </span>
-              </div>
-            </Grid>
+            <div className={classes.step_item_title}>
+              <span>
+                Move in and join <br /> our community
+              </span>
+            </div>
           </Grid>
         </Grid>
-      </Grid>
-      <Button
-        variant="contained"
-        color="primary"
-        className={classes.search_button}
-        onClick={() => handleSearch()}
-      >
-        Search my new home
-      </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.search_button}
+          onClick={() => handleSearch()}
+        >
+          Search my new home
+        </Button>
+      </div>
     </div>
   );
 };
