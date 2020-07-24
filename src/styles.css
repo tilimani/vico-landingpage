@@ -27,9 +27,12 @@ body {
   transform: translateY(-67px);
   transition: 0.5s ease;
 }
-
+.slick-slide img {
+  opacity: 0.5;
+}
 .slick-center img {
   width: 200px;
+  opacity: 1;
 }
 
 .slick-center p {
