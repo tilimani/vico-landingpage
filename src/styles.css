@@ -2,3 +2,19 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+
+.slick-dots li button:before {
+  font-size: 26px;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ef8e01;
+}
+
+.slick-slide img {
+  width: 140px;
+}
