@@ -15,17 +15,24 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around",
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column"
+      flexDirection: "column",
+      alignItems: "flex-start"
     }
   },
   description_wrapper: {
-    marginLeft: 20
+    marginLeft: 20,
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 0
+    }
   },
   section_title: {
     fontWeight: "bold",
     fontSize: 36,
     display: "flex",
     color: theme.palette.secondary.dark,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 30
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: 42
     }
@@ -45,7 +52,13 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     color: theme.palette.secondary.dark,
     fontSize: 16,
-    marginTop: 10
+    marginTop: 10,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 14
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16
+    }
   },
   steps_grid: {
     marginTop: 10
@@ -66,7 +79,13 @@ const useStyles = makeStyles(theme => ({
     height: "50%",
     fontSize: 16,
     fontWeight: "bold",
-    marginTop: 10
+    marginTop: 10,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 14
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16
+    }
   },
   home_image_wrapper: {
     display: "flex",

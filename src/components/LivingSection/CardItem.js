@@ -10,9 +10,13 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "0px 8px 27px rgba(0, 0, 0, 0.1)",
     borderRadius: 6,
     height: 320,
+    maxWidth: 559,
     cursor: "pointer",
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
+    [theme.breakpoints.down("md")]: {
+      padding: "40px 40px"
+    },
     [theme.breakpoints.down("xs")]: {
       height: "auto",
       padding: "30px 30px"
@@ -22,6 +26,12 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     color: theme.palette.secondary.main,
     marginTop: 40,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 15
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 16
     }
@@ -31,6 +41,12 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     color: theme.palette.secondary.main,
     lineHeight: 1.2,
+    [theme.breakpoints.down("md")]: {
+      fontSize: 18
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 26
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: 20
     }
@@ -39,7 +55,13 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "flex-end",
     position: "relative",
-    height: "50%"
+    height: "50%",
+    [theme.breakpoints.down("md")]: {
+      height: "40%"
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "50%"
+    }
   },
   card_header_image_wrapper: {
     marginRight: 20,
@@ -48,9 +70,9 @@ const useStyles = makeStyles(theme => ({
   },
   card_header_image: {
     float: "right",
-    width: 200,
+    width: 190,
     [theme.breakpoints.down("md")]: {
-      width: 160
+      width: 120
     },
     [theme.breakpoints.down("sm")]: {
       width: 200

@@ -22,8 +22,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     border: "1px solid rgba(196, 196, 196, 0.35)",
     margin: "auto",
-    marginTop: "20vh",
-    marginBottom: "10vh",
+    marginTop: "10vh",
     [theme.breakpoints.down("sm")]: {
       padding: "50px 0px",
       width: "100%",
