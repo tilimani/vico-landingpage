@@ -4,10 +4,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Slider from "react-slick";
 
-import ProfileItem from "./ProfileItem";
+import logo_eafit from "../assets/logo_eafit.png";
+import logo_udm from "../assets/logo_udm.png";
+import logo_unal from "../assets/logo_unal.png";
+import logo_upb from "../assets/logo_upb.png";
 
-import illustration from "../../assets/illustration4.png";
-
+const partners = [logo_eafit, logo_udm, logo_unal, logo_upb];
 const useStyles = makeStyles(theme => ({
   section_wrapper: { marginTop: "8vh", width: "90vw" },
   section_title: {
@@ -26,12 +28,22 @@ const useStyles = makeStyles(theme => ({
   },
   orange_hightLighter: {
     position: "absolute",
-    top: -24,
-    left: -38
+    top: 30,
+    left: 0
+  },
+  partner_img: {
+    width: "200px !important"
+  },
+  image_wrapper: {
+    display: "flex !important",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "200px !important"
   }
 }));
 
-const Community = () => {
+const PartnersSection = () => {
   const classes = useStyles();
   const isMobileScreen = useMediaQuery("(max-width:960px)");
   const settings = {
@@ -44,25 +56,32 @@ const Community = () => {
   };
 
   return (
-    <div className={`${classes.section_wrapper} community_section`}>
+    <div className={classes.section_wrapper}>
       <span className={classes.section_title}>
-        {`Meet our `}
         <span className={classes.highlighter}>
-          community
+          Trusted
           <img
-            src={illustration}
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/YXQb-screwedHighlighter.png"
             alt=""
             className={classes.orange_hightLighter}
           />
         </span>
+        {`  by our partners`}
       </span>
       <Slider {...settings}>
-        {[...Array(5).keys()].map(index => (
-          <ProfileItem key={index} />
+        {partners.map((item, index) => (
+          <div key={index} className={classes.image_wrapper}>
+            <img
+              key={index}
+              src={item}
+              alt=""
+              className={classes.partner_img}
+            />
+          </div>
         ))}
       </Slider>
     </div>
   );
 };
 
-export default Community;
+export default PartnersSection;
