@@ -4,12 +4,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Slider from "react-slick";
 
-import logo_eafit from "../assets/logo_eafit.png";
-import logo_udm from "../assets/logo_udm.png";
-import logo_unal from "../assets/logo_unal.png";
-import logo_upb from "../assets/logo_upb.png";
-
-const partners = [logo_eafit, logo_udm, logo_unal, logo_upb];
+const partners = [
+  "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/Dc-D-logo_eafit.png",
+  "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/eGR_-logo_udm.png",
+  "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/8Grv-logo_unal.png",
+  "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/eCR6-logo_upb.png"
+];
 const useStyles = makeStyles(theme => ({
   section_wrapper: { marginTop: "8vh", width: "90vw" },
   section_title: {
