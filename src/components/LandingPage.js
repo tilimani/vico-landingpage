@@ -8,6 +8,9 @@ import EarnMoneySection from "./EarnMoneySection";
 import NeedsSection from "./NeedsSection";
 import Community from "./Community";
 import PartnersSection from "./PartnersSection";
+import VideoEmbed from "./VideoEmbed";
+import FAQSection from "./FAQSection";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
@@ -21,6 +24,9 @@ const LandingPage = () => {
       <NeedsSection />
       <Community />
       <PartnersSection />
+      <VideoEmbed />
+      <FAQSection />
+      <Footer />
     </>
   );
 };
