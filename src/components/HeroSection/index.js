@@ -8,6 +8,18 @@ import "./index.css";
 import CustomSelect from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 
+const cityOptions = [
+  { value: "Medellín", label: "Medellín" },
+  { value: "Poblado", label: "Poblado" },
+  { value: "Laureles", label: "Laureles" }
+];
+
+const housingOptions = [
+  { value: "Option 1", label: "Option 1" },
+  { value: "Option 2", label: "Option 2" },
+  { value: "Option 3", label: "Option 3" }
+];
+
 const useStyles = makeStyles(theme => ({
   search_area: {
     marginTop: "6vh",
@@ -62,7 +74,12 @@ const HeroSection = () => {
                 borderRadius: 12
               }}
             >
-              1
+              <CustomSelect
+                name="city"
+                title="City"
+                options={cityOptions}
+                isSearchable={true}
+              />
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -86,7 +103,12 @@ const HeroSection = () => {
                 borderRadius: 12
               }}
             >
-              1
+              <CustomSelect
+                name="home"
+                title="All housing"
+                options={housingOptions}
+                isSearchable={false}
+              />
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
