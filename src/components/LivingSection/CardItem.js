@@ -102,7 +102,7 @@ const CardItem = props => {
   return (
     <Grid item xs={12} md={4}>
       <Card
-        className={[classes.card, "card-item"]}
+        className={`${classes.card} card-item`}
         style={{
           backgroundImage: `url(${background})`
         }}

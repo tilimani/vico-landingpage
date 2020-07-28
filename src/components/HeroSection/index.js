@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -37,6 +37,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const HeroSection = () => {
+  const [searchElements, setSearchElements] = useState({
+    city: "",
+    date: new Date(),
+    housing: ""
+  });
+
+  console.log(searchElements, "++++++++++++++++++++++++++++");
   const classes = useStyles();
 
   const handleSearch = () => {
@@ -79,6 +86,13 @@ const HeroSection = () => {
                 title="City"
                 options={cityOptions}
                 isSearchable={true}
+                value={searchElements.city}
+                setValue={value =>
+                  setSearchElements({
+                    ...searchElements,
+                    city: value
+                  })
+                }
               />
             </div>
           </Grid>
@@ -91,7 +105,15 @@ const HeroSection = () => {
                 borderRadius: 12
               }}
             >
-              <CustomDatePicker />
+              <CustomDatePicker
+                date={searchElements.date}
+                setDate={value =>
+                  setSearchElements({
+                    ...searchElements,
+                    date: value
+                  })
+                }
+              />
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -108,6 +130,13 @@ const HeroSection = () => {
                 title="All housing"
                 options={housingOptions}
                 isSearchable={false}
+                value={searchElements.housing}
+                setValue={value =>
+                  setSearchElements({
+                    ...searchElements,
+                    housing: value
+                  })
+                }
               />
             </div>
           </Grid>

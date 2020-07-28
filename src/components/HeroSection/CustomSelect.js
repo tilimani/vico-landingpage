@@ -72,13 +72,21 @@ const customStyles = {
     color: colors.lightgray
   })
 };
-const CustomSelect = ({ name, title, icon, options, isSearchable }) => {
+const CustomSelect = ({
+  name,
+  title,
+  options,
+  isSearchable,
+  value,
+  setValue
+}) => {
+  const [selectedOption, setSelectedOption] = useState(value);
+
   const classes = useStyles();
 
-  const [selectedValue, setSelectedValue] = useState("");
-
   const handleChange = value => {
-    setSelectedValue(value);
+    setSelectedOption(value);
+    setValue(value.value);
   };
 
   const getIcon = isOption => {
@@ -125,7 +133,7 @@ const CustomSelect = ({ name, title, icon, options, isSearchable }) => {
       isMulti={false}
       isSearchable={isSearchable}
       options={options}
-      value={selectedValue}
+      value={selectedOption}
       onChange={handleChange}
       styles={customStyles}
       components={{

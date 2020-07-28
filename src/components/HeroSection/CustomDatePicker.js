@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import "date-fns";
 import {
   MuiPickersUtilsProvider,
@@ -9,11 +10,21 @@ import DateRangeOutlinedIcon from "@material-ui/icons/DateRangeOutlined";
 
 import "./CustomDatePicker.css";
 
-const CustomDatePicker = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+const useStyles = makeStyles(theme => ({
+  calendar: {
+    color: theme.palette.secondary.light
+  }
+}));
+
+const CustomDatePicker = ({ date, setDate }) => {
+  const [selectedDate, setSelectedDate] = useState(date);
   const handleDateChange = date => {
     setSelectedDate(date);
+    setDate(date);
   };
+
+  const classes = useStyles();
+
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <KeyboardDatePicker
@@ -24,7 +35,7 @@ const CustomDatePicker = () => {
         id="date-picker-inline"
         value={selectedDate}
         onChange={handleDateChange}
-        keyboardIcon={<DateRangeOutlinedIcon color="secondary" />}
+        keyboardIcon={<DateRangeOutlinedIcon className={classes.calendar} />}
       />
     </MuiPickersUtilsProvider>
   );
