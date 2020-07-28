@@ -28,7 +28,8 @@ const colors = {
 
 const useStyles = makeStyles(theme => ({
   expandMore_icon: {
-    fontSize: 30
+    fontSize: 30,
+    color: colors.lightgray
   },
   placeholder_text: { color: colors.lightgray, fontSize: 16 },
   option_icon: {
@@ -70,6 +71,10 @@ const customStyles = {
     ...base,
     paddingLeft: 12,
     color: colors.lightgray
+  }),
+  singleValue: base => ({
+    ...base,
+    color: colors.lightgray
   })
 };
 const CustomSelect = ({
@@ -99,7 +104,8 @@ const CustomSelect = ({
 
   const DropdownIndicator = props => {
     return (
-      components.DropdownIndicator && (
+      components.DropdownIndicator &&
+      !isSearchable && (
         <components.DropdownIndicator {...props}>
           <ExpandMoreIcon className={classes.expandMore_icon} />
         </components.DropdownIndicator>

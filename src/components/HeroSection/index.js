@@ -43,7 +43,6 @@ const HeroSection = () => {
     housing: ""
   });
 
-  console.log(searchElements, "++++++++++++++++++++++++++++");
   const classes = useStyles();
 
   const handleSearch = () => {
