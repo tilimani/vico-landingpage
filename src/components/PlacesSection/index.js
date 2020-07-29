@@ -1,8 +1,7 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useMediaQuery, Grid } from "@material-ui/core";
 
 import AppsOutlinedIcon from "@material-ui/icons/AppsOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";

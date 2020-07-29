@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useMediaQuery, Grid } from "@material-ui/core";
 
 import Slider from "react-slick";
 
@@ -28,8 +28,11 @@ const useStyles = makeStyles(theme => ({
   },
   orange_hightLighter: {
     position: "absolute",
-    top: 30,
-    left: 0
+    top: 34,
+    left: 0,
+    [theme.breakpoints.down("xs")]: {
+      top: 30
+    }
   },
   partner_img: {
     width: "200px !important"
@@ -45,29 +48,46 @@ const useStyles = makeStyles(theme => ({
 
 const PartnersSection = () => {
   const classes = useStyles();
-  const isMobileScreen = useMediaQuery("(max-width:960px)");
+  const isMediumScreen = useMediaQuery("(max-width:960px)");
+  const isMobileScreen = useMediaQuery("(max-width:400px)");
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     centerMode: true,
-    slidesToShow: isMobileScreen ? 1 : 3,
+    slidesToShow: isMediumScreen ? 1 : 3,
     slidesToScroll: 1
   };
 
   return (
     <div className={classes.section_wrapper}>
-      <span className={classes.section_title}>
-        <span className={classes.highlighter}>
-          Trusted
-          <img
-            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/YXQb-screwedHighlighter.png"
-            alt=""
-            className={classes.orange_hightLighter}
-          />
-        </span>
-        {`  by our partners`}
-      </span>
+      {isMobileScreen ? (
+        <Grid container spacing={0} className={classes.section_title}>
+          <Grid item xs={12} className={classes.highlighter}>
+            {`Trusted `}
+            <img
+              src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/YXQb-screwedHighlighter.png"
+              alt=""
+              className={classes.orange_hightLighter}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            by our partners
+          </Grid>
+        </Grid>
+      ) : (
+        <div className={classes.section_title}>
+          <span className={classes.highlighter}>
+            {`Trusted `}
+            <img
+              src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/YXQb-screwedHighlighter.png"
+              alt=""
+              className={classes.orange_hightLighter}
+            />
+          </span>
+          <span>by our partners</span>
+        </div>
+      )}
       <Slider {...settings}>
         {partners.map((item, index) => (
           <div key={index} className={classes.image_wrapper}>
