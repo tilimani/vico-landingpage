@@ -71,14 +71,11 @@ const useStyles = makeStyles(theme => ({
     }
   },
   description: {
-    fontSize: 20,
+    fontSize: 16,
     marginTop: "4vh",
     color: theme.palette.secondary.main,
     [theme.breakpoints.down("md")]: {
       marginTop: "2vh"
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 16
     }
   },
   image_wrapper: {
