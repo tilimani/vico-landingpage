@@ -1,6 +1,8 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import AppsOutlinedIcon from "@material-ui/icons/AppsOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
@@ -24,7 +26,14 @@ const useStyles = makeStyles(theme => ({
   orange_hightLighter: {
     position: "absolute",
     top: 8,
-    left: 0
+    left: -11,
+    [theme.breakpoints.down("sm")]: {
+      top: 2,
+      width: 180
+    },
+    [theme.breakpoints.down("xs")]: {
+      top: 0
+    }
   },
   links_wrapper: {
     display: "flex",
@@ -54,19 +63,36 @@ const useStyles = makeStyles(theme => ({
 
 const PlacesSection = () => {
   const classes = useStyles();
+  const isMobileScreen = useMediaQuery("(max-width:600px)");
   return (
     <div className={classes.places_section}>
-      <span className={classes.section_title}>
-        Find the place that fits{" "}
-        <span className={classes.highlighter}>
-          your needs
-          <img
-            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/OwSG-orangeHightLighter.png"
-            alt=""
-            className={classes.orange_hightLighter}
-          />
-        </span>
-      </span>
+      {isMobileScreen ? (
+        <Grid container spacing={0} className={classes.section_title}>
+          <Grid item xs={12}>
+            Find the place that fits
+          </Grid>
+          <Grid item xs={12} className={classes.highlighter}>
+            your needs
+            <img
+              src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/OwSG-orangeHightLighter.png"
+              alt=""
+              className={classes.orange_hightLighter}
+            />
+          </Grid>
+        </Grid>
+      ) : (
+        <div className={classes.section_title}>
+          <span>{`Find the place that fits `}</span>
+          <span className={classes.highlighter}>
+            your needs
+            <img
+              src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/OwSG-orangeHightLighter.png"
+              alt=""
+              className={classes.orange_hightLighter}
+            />
+          </span>
+        </div>
+      )}
       <div className={classes.links_wrapper}>
         <div className={classes.link_wrapper}>
           <AppsOutlinedIcon
