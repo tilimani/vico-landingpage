@@ -30,7 +30,10 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     paddingLeft: 0,
-    paddingRight: "2vw"
+    paddingRight: "2vw",
+    [theme.breakpoints.down("xs")]: {
+      height: "auto"
+    }
   }
 }));
 

@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
+import circle from "../../assets/circle.png";
 import CustomAccordion from "./CustomAccordion";
 
 const faqData = [
@@ -60,11 +61,12 @@ const useStyles = makeStyles(theme => ({
   section_title: {
     fontFamily: "Nunito",
     fontWeight: "bold",
-    fontSize: 36,
+    fontSize: 34,
     marginLeft: "2vw",
     color: theme.palette.secondary.dark,
     [theme.breakpoints.down("sm")]: {
-      fontSize: 30
+      fontSize: 30,
+      marginLeft: "4vw"
     }
   },
   highlighter: {
@@ -72,8 +74,17 @@ const useStyles = makeStyles(theme => ({
   },
   orange_hightLighter: {
     position: "absolute",
-    top: -20,
-    left: -20
+    top: -4,
+    left: -18,
+    width: 110,
+    [theme.breakpoints.down("sm")]: {
+      top: -6,
+      left: -20,
+      width: 100
+    }
+  },
+  faq_data: {
+    marginTop: 20
   }
 }));
 const FAQSection = () => {
@@ -83,14 +94,10 @@ const FAQSection = () => {
       <span className={classes.section_title}>
         <span className={classes.highlighter}>
           FAQ
-          <img
-            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/f0YW-orangeHighlighter3.png"
-            alt=""
-            className={classes.orange_hightLighter}
-          />
+          <img src={circle} alt="" className={classes.orange_hightLighter} />
         </span>
       </span>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} className={classes.faq_data}>
         {faqData.map((item, index) => (
           <Grid key={index} item xs={12} sm={12} md={4} lg={3}>
             <CustomAccordion item={item} />

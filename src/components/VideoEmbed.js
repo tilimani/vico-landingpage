@@ -10,7 +10,7 @@ const VideoEmbed = () => {
       src="https://www.youtube.com/embed/0nHSgqRH_DY"
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullscreen
+      allowFullScreen
     />
   );
 };

@@ -65,8 +65,22 @@ const HeroSection = () => {
           alt="logo"
           id="vico-logo"
         />
-        <span className="title">Love where you live</span>
-        <span className="description">
+        <span
+          className="title"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          Love where you live
+        </span>
+        <span
+          className="description"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           Find and book furnished rooms and apartments for mid-and long-term
           stays in Medellin and Bogota.
         </span>

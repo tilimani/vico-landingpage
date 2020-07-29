@@ -6,8 +6,6 @@ import Slider from "react-slick";
 
 import ProfileItem from "./ProfileItem";
 
-import illustration from "../../assets/illustration4.png";
-
 const useStyles = makeStyles(theme => ({
   section_wrapper: { marginTop: "8vh", width: "90vw" },
   section_title: {
@@ -27,7 +25,8 @@ const useStyles = makeStyles(theme => ({
   orange_hightLighter: {
     position: "absolute",
     top: -24,
-    left: -38
+    left: -38,
+    width: 160
   }
 }));
 
@@ -50,7 +49,7 @@ const Community = () => {
         <span className={classes.highlighter}>
           community
           <img
-            src={illustration}
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/OixB-Ilustraci%C3%B3n_4.png"
             alt=""
             className={classes.orange_hightLighter}
           />
