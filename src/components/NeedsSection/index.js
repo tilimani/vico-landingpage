@@ -5,7 +5,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
-  needs_section: { marginTop: "4vh", padding: "0 8vw" },
+  needs_section: { marginTop: "8vh", padding: "0 8vw" },
   section_title: {
     fontFamily: "Nunito",
     fontWeight: "bold",
