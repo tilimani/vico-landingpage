@@ -46,14 +46,23 @@ body {
   color: #ef8e01;
 }
 
-@media screen and (max-width: 1342px) {
+@media screen and (max-width: 1330px) {
   .community_section .slick-slide p {
-    width: 200px;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1015px) {
+  .community_section .slick-slide p {
+    width: 160px;
   }
 }
 
 @media screen and (max-width: 960px) {
   .community_section .slick-slide p {
     width: 350px;
+  }
+  .community_section .slick-list {
+    width: 100%;
+    padding: 0px !important;
   }
 }

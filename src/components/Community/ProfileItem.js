@@ -9,17 +9,17 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "6vh"
+    marginTop: "6vh",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: 100
+    }
   },
   description: {
     fontSize: 16,
     color: theme.palette.secondary.light,
     marginTop: 20,
-    width: 350,
-    textAlign: "center",
-    [theme.breakpoints.down("md")]: {
-      width: 300
-    }
+    width: 300,
+    textAlign: "center"
   },
   name: {
     fontSize: 16,
