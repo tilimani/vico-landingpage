@@ -79,3 +79,21 @@ body {
     padding: 0px !important;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .community_section .slick-initialized .slick-slide {
+    margin-top: 0px;
+  }
+  .community_section .slick-slide .avatar_wrapper::before {
+    filter: grayscale(0%);
+  }
+  .community_section .slick-slide p {
+    color: #2a3c44;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .community_section .slick-slide span {
+    font-size: 18px;
+    color: #ef8e01;
+  }
+}

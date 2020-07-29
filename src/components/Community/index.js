@@ -34,14 +34,16 @@ const useStyles = makeStyles(theme => ({
 
 const Community = () => {
   const classes = useStyles();
-  const isMobileScreen = useMediaQuery("(max-width:960px)");
+  const isMediumScreen = useMediaQuery("(max-width:960px)");
+  const isMobileScreen = useMediaQuery("(max-width:600px)");
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    centerMode: true,
-    slidesToShow: isMobileScreen ? 1 : 3,
-    slidesToScroll: 1
+    centerMode: !isMobileScreen ? true : false,
+    slidesToShow: isMediumScreen ? 1 : 3,
+    slidesToScroll: 1,
+    focusOnSelect: true
   };
 
   return (

@@ -3,8 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { Typography } from "@material-ui/core";
 
-import backcommunity from "../../assets/backcommunity.png";
-
 const useStyles = makeStyles(theme => ({
   profile_wrapper: {
     display: "flex !important",
@@ -14,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: "6vh",
     [theme.breakpoints.down("sm")]: {
       paddingLeft: 100
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: 0
     }
   },
   description: {
@@ -30,10 +31,6 @@ const useStyles = makeStyles(theme => ({
   },
   avatar_wrapper: {
     position: "relative",
-    // backgroundImage: `url(${backcommunity})`,
-    // backgroundRepeat: "no-repeat",
-    // backgroundSize: "contain",
-    // backgroundPosition: "bottom",
     width: 320,
     display: "flex",
     flexDirection: "column",
