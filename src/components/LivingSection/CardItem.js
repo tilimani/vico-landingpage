@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 import "./style.css";
@@ -12,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "0px 8px 27px rgba(0, 0, 0, 0.1)",
     borderRadius: 6,
     height: 320,
-    maxWidth: 559,
+    maxWidth: 375,
     cursor: "pointer",
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
@@ -100,38 +99,32 @@ const CardItem = props => {
   const { image, title, description, background } = item;
 
   return (
-    <Grid item xs={12} md={4}>
-      <Card
-        className={`${classes.card} card-item`}
-        style={{
-          backgroundImage: `url(${background})`
-        }}
-      >
-        <div className={classes.card_header}>
-          <div className={classes.card_header_image_wrapper}>
-            <img
-              src={image}
-              alt={title}
-              className={classes.card_header_image}
-            />
-          </div>
-          <div className={classes.card_header_typo_wrapper}>
-            <Typography component="span" className={classes.title}>
-              {title}
-            </Typography>
-          </div>
+    <Card
+      className={`${classes.card} card-item`}
+      style={{
+        backgroundImage: `url(${background})`
+      }}
+    >
+      <div className={classes.card_header}>
+        <div className={classes.card_header_image_wrapper}>
+          <img src={image} alt={title} className={classes.card_header_image} />
         </div>
-        <div className={classes.description_wrapper}>
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.description}
-          >
-            {description}
+        <div className={classes.card_header_typo_wrapper}>
+          <Typography component="span" className={classes.title}>
+            {title}
           </Typography>
         </div>
-      </Card>
-    </Grid>
+      </div>
+      <div className={classes.description_wrapper}>
+        <Typography
+          variant="body2"
+          component="p"
+          className={classes.description}
+        >
+          {description}
+        </Typography>
+      </div>
+    </Card>
   );
 };
 

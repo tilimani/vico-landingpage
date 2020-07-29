@@ -3,13 +3,6 @@
 }
 
 .card-item:hover {
-  transform: scale(1, 1.1);
+  transform: scale(1.1);
   transition: 0.5s ease;
-}
-
-@media screen and (max-width: 960px) {
-  .card-item:hover {
-    transform: scale(1.1, 1);
-    transition: 0.5s ease;
-  }
 }

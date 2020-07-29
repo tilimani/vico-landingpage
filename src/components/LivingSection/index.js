@@ -92,7 +92,9 @@ const FieldsSection = () => {
 
       <Grid container spacing={3} className={classes.cards_grid}>
         {mockData.map((item, index) => (
-          <CardItem key={index} item={item} />
+          <Grid item xs={12} md={4}>
+            <CardItem key={index} item={item} />
+          </Grid>
         ))}
       </Grid>
     </div>
