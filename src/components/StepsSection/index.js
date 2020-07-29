@@ -33,8 +33,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("md")]: {
       fontSize: 30
     },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 42
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 10
     }
   },
   highlighter: {
@@ -58,6 +58,9 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: 16
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 10
     }
   },
   steps_grid: {
