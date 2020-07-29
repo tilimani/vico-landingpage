@@ -16,7 +16,7 @@ const mockData = [
   },
   {
     image:
-      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/Kokz-Illustration_Card2@2x.png",
+      "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/1FIZ-imgCard2.png",
     background:
       "https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/yJrw-Background_card2@3x.png",
     title: "You are covered during the entire stay.",

@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
 import orangeHighlighter from "../../assets/orangeHighlighter2.png";
 
 const useStyles = makeStyles(theme => ({
@@ -181,7 +180,7 @@ const StepsSection = () => {
     <div className={classes.steps_section}>
       <div className={classes.home_image_wrapper}>
         <img
-          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/n3b_-home.png"
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/f2qH-ImageRoom.png"
           alt="home"
           className={classes.home_image}
         />
