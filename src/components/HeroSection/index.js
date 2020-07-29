@@ -8,8 +8,6 @@ import "./index.css";
 import CustomSelect from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
 
-import bg_mobile from "../../assets/bg_mobile.png";
-
 const cityOptions = [
   { value: "Medellín", label: "Medellín" },
   { value: "Poblado", label: "Poblado" },
@@ -55,10 +53,14 @@ const HeroSection = () => {
       {/** LEFT RECTANGLES DESIGN */}
       {/** Dark gray background */}
       {isMobileScreen ? (
-        <img src={bg_mobile} className="hero-section-bg" alt="" />
-      ) : (
         <img
           src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/tNef-bg_mobile.png"
+          className="hero-section-bg"
+          alt=""
+        />
+      ) : (
+        <img
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/rtDu-heroBackground.png"
           className="hero-section-bg"
           alt=""
         />
