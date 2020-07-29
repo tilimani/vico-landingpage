@@ -58,7 +58,7 @@ const HeroSection = () => {
         <img src={bg_mobile} className="hero-section-bg" alt="" />
       ) : (
         <img
-          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/rtDu-heroBackground.png"
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/tNef-bg_mobile.png"
           className="hero-section-bg"
           alt=""
         />
