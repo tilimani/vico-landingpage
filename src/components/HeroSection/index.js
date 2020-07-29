@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import "./index.css";
 import CustomSelect from "./CustomSelect";
 import CustomDatePicker from "./CustomDatePicker";
+
+import bg_mobile from "../../assets/bg_mobile.png";
 
 const cityOptions = [
   { value: "Medellín", label: "Medellín" },
@@ -44,7 +46,7 @@ const HeroSection = () => {
   });
 
   const classes = useStyles();
-
+  const isMobileScreen = useMediaQuery("(max-width:600px)");
   const handleSearch = () => {
     //Search
   };
@@ -52,11 +54,15 @@ const HeroSection = () => {
     <div className="hero-section-wrapper">
       {/** LEFT RECTANGLES DESIGN */}
       {/** Dark gray background */}
-      <img
-        src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/rtDu-heroBackground.png"
-        className="hero-section-bg"
-        alt=""
-      />
+      {isMobileScreen ? (
+        <img src={bg_mobile} className="hero-section-bg" alt="" />
+      ) : (
+        <img
+          src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/rtDu-heroBackground.png"
+          className="hero-section-bg"
+          alt=""
+        />
+      )}
 
       {/** MAIN CONTENT (TEXT/PICKERS ...) */}
       <div className="hero-content">
