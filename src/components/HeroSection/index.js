@@ -121,7 +121,8 @@ const HeroSection = () => {
                 backgroundColor: "white",
                 color: "white",
                 height: 58,
-                borderRadius: 12
+                borderRadius: 12,
+                cursor: "pointer"
               }}
             >
               <CustomDatePicker

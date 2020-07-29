@@ -18,6 +18,8 @@ const useStyles = makeStyles(theme => ({
 
 const CustomDatePicker = ({ date, setDate }) => {
   const [selectedDate, setSelectedDate] = useState(date);
+
+  const [isOpen, setIsOpen] = useState(false);
   const handleDateChange = date => {
     setSelectedDate(date);
     setDate(date);
@@ -36,6 +38,23 @@ const CustomDatePicker = ({ date, setDate }) => {
         value={selectedDate}
         onChange={handleDateChange}
         keyboardIcon={<DateRangeOutlinedIcon className={classes.calendar} />}
+        KeyboardButtonProps={{
+          onFocus: e => {
+            setIsOpen(true);
+          }
+        }}
+        PopoverProps={{
+          disableRestoreFocus: true,
+          onClose: () => {
+            setIsOpen(false);
+          }
+        }}
+        InputProps={{
+          onFocus: () => {
+            setIsOpen(true);
+          }
+        }}
+        open={isOpen}
       />
     </MuiPickersUtilsProvider>
   );
