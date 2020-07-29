@@ -121,7 +121,14 @@ const EarnMoneySection = () => {
     <div className={classes.earn_money_section}>
       <Card className={classes.card}>
         <div className={classes.description_wrapper}>
-          <Typography component="span" className={classes.title}>
+          <Typography
+            component="span"
+            className={classes.title}
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             {`Earn `}
             <span className={classes.highlighter}>
               {`money `}
@@ -146,6 +153,10 @@ const EarnMoneySection = () => {
             variant="body2"
             component="p"
             className={classes.description}
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="1000"
           >
             Manage your properties efficiently and turn them into a profit by
             becoming a host, you became part of our family.

@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
-import circle from "../../assets/circle.png";
 import CustomAccordion from "./CustomAccordion";
 
 const faqData = [
@@ -91,10 +90,20 @@ const FAQSection = () => {
   const classes = useStyles();
   return (
     <div className={classes.section_wrapper}>
-      <span className={classes.section_title}>
+      <span
+        className={classes.section_title}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         <span className={classes.highlighter}>
           FAQ
-          <img src={circle} alt="" className={classes.orange_hightLighter} />
+          <img
+            src="https://uploads.codesandbox.io/uploads/user/129a52fa-24c5-45b6-8b1e-048cf0197deb/LM7v-Cicrcle@2x.png"
+            alt=""
+            className={classes.orange_hightLighter}
+          />
         </span>
       </span>
       <Grid container spacing={3} className={classes.faq_data}>

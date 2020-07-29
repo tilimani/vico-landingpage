@@ -126,7 +126,15 @@ const StepsSection = () => {
     return (
       <Fragment>
         {isMobileScreen ? (
-          <Grid container spacing={3} className={classes.section_title}>
+          <Grid
+            container
+            spacing={3}
+            className={classes.section_title}
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             <Grid item sm={12} md={6} className={classes.section_title_grid}>
               <span>{`Move in `}</span>
             </Grid>
@@ -151,7 +159,13 @@ const StepsSection = () => {
             </Grid>
           </Grid>
         ) : (
-          <div className={classes.section_title}>
+          <div
+            className={classes.section_title}
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             <span>{`Move in `}</span>
             <div className={classes.arrow_wrapper}>
               <img
@@ -187,7 +201,13 @@ const StepsSection = () => {
       </div>
       <div className={classes.description_wrapper}>
         {getTitleComponent()}
-        <div className={classes.subtitle}>
+        <div
+          className={classes.subtitle}
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <span>Find a new home in just a few steps</span>
         </div>
         <Grid container spacing={3} className={classes.steps_grid}>

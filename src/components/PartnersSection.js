@@ -62,7 +62,15 @@ const PartnersSection = () => {
   return (
     <div className={classes.section_wrapper}>
       {isMobileScreen ? (
-        <Grid container spacing={0} className={classes.section_title}>
+        <Grid
+          container
+          spacing={0}
+          className={classes.section_title}
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <Grid item xs={12} className={classes.highlighter}>
             {`Trusted `}
             <img
@@ -76,7 +84,13 @@ const PartnersSection = () => {
           </Grid>
         </Grid>
       ) : (
-        <div className={classes.section_title}>
+        <div
+          className={classes.section_title}
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <span className={classes.highlighter}>
             {`Trusted `}
             <img

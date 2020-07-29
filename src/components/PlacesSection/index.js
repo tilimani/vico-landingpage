@@ -66,7 +66,15 @@ const PlacesSection = () => {
   return (
     <div className={classes.places_section}>
       {isMobileScreen ? (
-        <Grid container spacing={0} className={classes.section_title}>
+        <Grid
+          container
+          spacing={0}
+          className={classes.section_title}
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <Grid item xs={12}>
             Find the place that fits
           </Grid>
@@ -80,7 +88,13 @@ const PlacesSection = () => {
           </Grid>
         </Grid>
       ) : (
-        <div className={classes.section_title}>
+        <div
+          className={classes.section_title}
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <span>{`Find the place that fits `}</span>
           <span className={classes.highlighter}>
             your needs

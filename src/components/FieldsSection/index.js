@@ -45,7 +45,13 @@ const FieldsSection = () => {
   };
   return (
     <div className={classes.fields_section}>
-      <span className={classes.section_title}>
+      <span
+        className={classes.section_title}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         {`What are you `}
         <span className={classes.highlighter}>
           {`looking `}

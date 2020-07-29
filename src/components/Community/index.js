@@ -48,7 +48,13 @@ const Community = () => {
 
   return (
     <div className={`${classes.section_wrapper} community_section`}>
-      <span className={classes.section_title}>
+      <span
+        className={classes.section_title}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         {`Meet our `}
         <span className={classes.highlighter}>
           community

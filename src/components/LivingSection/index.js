@@ -72,7 +72,13 @@ const FieldsSection = () => {
 
   return (
     <div className={classes.living_section}>
-      <span className={classes.section_title}>
+      <span
+        className={classes.section_title}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         {`Start `}
         <span className={classes.highlighter}>
           {`loving `}
@@ -85,7 +91,13 @@ const FieldsSection = () => {
         where you live.
       </span>
 
-      <div className={classes.section_subtitle}>
+      <div
+        className={classes.section_subtitle}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+      >
         It's surprisingly hard to find a good place to live. That's why we
         started VICO.{" "}
       </div>

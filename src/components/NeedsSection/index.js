@@ -65,7 +65,13 @@ const NeedsSection = () => {
   const classes = useStyles();
   return (
     <div className={classes.needs_section}>
-      <span className={classes.section_title}>
+      <span
+        className={classes.section_title}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         {`Thinking of `}
         <span className={classes.highlighter}>
           {`your needs `}
@@ -76,7 +82,13 @@ const NeedsSection = () => {
           />
         </span>
       </span>
-      <div className={classes.subtitle}>
+      <div
+        className={classes.subtitle}
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+      >
         <span>
           Your safety is our priority, therefore we designed our reservation
           system thinking of your needs.
